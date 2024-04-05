@@ -11,7 +11,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <section>
+          <div className="mockup-phone">
+            <div className="camera"></div>
+            <div className="display">
+              <div className="artboard bg-white phone-5">
+                <div className="phone-content">
+                  {children} {/* Inserting children here */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
     </html>
   );
 }
