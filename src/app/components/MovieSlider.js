@@ -1,9 +1,9 @@
 "use client"
-
-// components/MovieSlider.js
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import Link from 'next/link';
+import Link from 'next/link'; // Import Link from next/link
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function MovieSlider() {
     const [popularMovies, setPopularMovies] = useState([]);
@@ -40,9 +40,9 @@ function MovieSlider() {
         <Slider {...settings}>
             {popularMovies && popularMovies.map((movie, index) => (
                 <div key={index} className="ml-5">
-                    <Link href={`/details/${movie.id}`} passHref>
+                    <Link href={`/details/${movie.id}`} passHref> {/* Use Link from next/link */}
                         <a>
-                            <div className="movie-poster-home" style={{ marginBottom: '20px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <div className="movie-poster-home" style={{ marginBottom: '20px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
                                 <img
                                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                                     alt={movie.title}

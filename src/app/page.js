@@ -1,6 +1,8 @@
 import React from 'react';
 import Nav from './components/nav';
 import MovieList from './components/MovieList';
+import MovieSlider from './components/MovieSlider';
+
 
 
 export default function Home() {
@@ -8,6 +10,7 @@ export default function Home() {
     <section>
       <Nav />
       <MovieList />
+      <MovieSlider />
     </section>
   );
 }
