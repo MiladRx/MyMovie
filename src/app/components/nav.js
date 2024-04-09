@@ -10,7 +10,7 @@ function Nav() {
 
             </div>
             <div className="navbar-center">
-                <Link href="details" className='className="btn btn-ghost text-xl'>MyMovies</Link>
+                <Link href="details" className='className="btn btn-ghost text-xl'><h1>MyMovies</h1></Link>
             </div>
             <div className="navbar-end">
                 <input type="checkbox" value="synthwave" className="toggle mr-5 theme-controller" />

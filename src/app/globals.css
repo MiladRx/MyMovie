@@ -4,7 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Mulish";
+  src: local("Mulish"), url("/src/app/fonts/Mulish-Bold.ttf") format("opentype");
+  font-weight: bold;
+}
 
+@font-face {
+  font-family: "Merriweather";
+  src: local("Merriweather"), url("/src/app/fonts/Merriweather-Bold.ttf") format("opentype");
+  font-weight: bold;
+}
+
+
+h2{
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+}
+
+h1{
+  font-family: 'Merriweather', sans-serif;
+  font-weight: bold;
+}
 
 
 

@@ -41,8 +41,8 @@ function MovieSlider() {
             {popularMovies && popularMovies.map((movie, index) => (
                 <div key={index} className="ml-5">
                     <Link href={`/details/${movie.id}`} passHref> {/* Use Link from next/link */}
-                        <a>
-                        <div className="movie-poster-home" style={{ marginBottom: '20px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <a> 
+                            <div className="movie-poster-home" style={{ marginBottom: '20px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
                                 <img
                                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                                     alt={movie.title}
@@ -56,7 +56,7 @@ function MovieSlider() {
                                 />
                                 <div style={{ flex: '3' }}>
                                     <div style={{ marginLeft: '10px', maxWidth: '150px' }}>
-                                        <h2 style={{ fontWeight: 'bold', textAlign: 'left' }}>{movie.title}</h2>
+                                        <h2 style={{  textAlign: 'left' }}>{movie.title}</h2>
                                         <p style={{ textAlign: 'left' }}>Rating: {movie.vote_average}</p>
                                         {/* You may display additional information here if needed */}
                                     </div>

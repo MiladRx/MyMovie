@@ -15,7 +15,7 @@ function MoviePosterHome({ title, rating, imageUrl }) {
                 }}
             />  
             <div style={{ marginLeft: '2px', maxWidth: '150px' }}> 
-                <h2 style={{ fontWeight: 'bold' }}>{title}</h2>
+                <h2 style={{}}>{title}</h2>
                 <p>Rating: {rating}</p>
             </div>
         </div>

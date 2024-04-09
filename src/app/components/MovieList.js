@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import MoviePosterHome from './MoviePosterHome';
-
+import Link from 'next/link'; // Import Link from Next.js
 
 export default function MovieList() {
   const [nowPlaying, setNowPlaying] = useState([]);
@@ -37,13 +37,11 @@ export default function MovieList() {
     slidesToScroll: 1
   };
 
-
-
   return (
     <div>
       <div className="mt-14 ml-6 mr-7 flex justify-between">
         <div>
-          <h1 className="text-2xl font-bold justify-self-start">Now Showing</h1>
+          <h1 className="text-2xl  justify-self-start">Now Showing</h1>
         </div>
         <div className="badges flex items-center">
           <div className="badge pt-3 text-gray-400 pb-3 badge-outline">See More</div>
@@ -52,24 +50,26 @@ export default function MovieList() {
 
       <Slider {...settings}>
         {nowPlaying && nowPlaying.map((movie, index) => (
-          <div key={index} className="ml-5 mt-5">
-            <MoviePosterHome
-              title={movie.title}
-              rating={movie.vote_average}
-              imageUrl={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            />
-          </div>
+          <Link key={index} href={`/details/${movie.id}`}> {/* Wrap MoviePosterHome with Link */}
+            <a>
+              <div className="ml-5 mt-5">
+                <MoviePosterHome
+                  title={movie.title}
+                  rating={movie.vote_average}
+                  imageUrl={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                />
+              </div>
+            </a>
+          </Link>
         ))}
       </Slider>
 
       <div className="mt-10 ml-6 mr-7 mb-7 flex justify-between">
-        <h1 className="text-2xl font-bold  justify-self-start">Popular</h1>
+        <h1 className="text-2xl  justify-self-start">Popular</h1>
         <div className="badges flex items-center">
           <div className="badge pt-3 pb-3 text-gray-400  badge-outline">See More</div>
         </div>
       </div>
-
-      
     </div>
   );
 }

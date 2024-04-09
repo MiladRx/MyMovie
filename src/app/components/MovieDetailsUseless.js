@@ -56,7 +56,7 @@ function MovieSlider() {
                                 />
                                 <div style={{ flex: '3' }}>
                                     <div style={{ marginLeft: '10px', maxWidth: '150px' }}>
-                                        <h2 style={{ fontWeight: 'bold', textAlign: 'left' }}>{movie.title}</h2>
+                                        <h2 style={{ textAlign: 'left' }}>{movie.title}</h2>
                                         <p style={{ textAlign: 'left' }}>Rating: {movie.vote_average}</p>
                                         {/* You may display additional information here if needed */}
                                     </div>
