@@ -1,11 +1,13 @@
-// MovieDescription.js
 import React from "react";
 
 const MovieDescription = ({ description }) => {
+  // Truncate description if it exceeds 200 characters
+  const truncatedDescription = description.length > 200 ? description.substring(0, 200) + "..." : description;
+
   return (
-    <article className="pl-4 mb-4" style={{ maxWidth: '356px' }}>
+    <article className="pl-5 mb-6 mt-6" style={{ maxWidth: '356px' }}>
       <h2 className="text-indigo-900  text-2xl mb-2">Description</h2>
-      <p className="text-gray-400">{description}</p>
+      <p className="text-gray-400">{truncatedDescription}</p>
     </article>
   );
 };

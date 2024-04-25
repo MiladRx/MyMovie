@@ -5,17 +5,19 @@ import Link from 'next/link';
 
 function Nav() {
     return (
-        <div className="navbar bg-base-100 relative top-10 w-full">
-            <div className="mt- navbar-start">
+        <div className="mt-5 navbar bg-base-100 relative  w-full">
+            <div className=" navbar-start">
 
             </div>
             <div className="navbar-center">
-                <Link href="details" className='className="btn btn-ghost text-xl'><h1>MyMovies</h1></Link>
+                <Link href="#" className='className="btn btn-ghost text-lg'><h2>MyMovies</h2></Link>
             </div>
             <div className="navbar-end">
                 <input type="checkbox" value="synthwave" className="toggle mr-5 theme-controller" />
             </div>
+
         </div>
+
     );
 }
 

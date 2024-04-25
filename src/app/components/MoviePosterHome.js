@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoMdStar } from 'react-icons/io';
 
 function MoviePosterHome({ title, rating, imageUrl }) {
     return (
@@ -7,16 +8,19 @@ function MoviePosterHome({ title, rating, imageUrl }) {
                 src={imageUrl}
                 alt={title}
                 style={{
-                    marginBottom: '10px',
+                    marginBottom: '0px',
                     height: '210px',
                     minWidth: '150px', 
-                    borderRadius: '10px',
-                    boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.4)'
+                    borderRadius: '5px',
+                    boxShadow: '0px 12px 10px -4px rgba(0, 0, 0, 0.2)'
                 }}
             />  
-            <div style={{ marginLeft: '2px', maxWidth: '150px' }}> 
-                <h2 style={{}}>{title}</h2>
-                <p>Rating: {rating}</p>
+           <div style={{ marginLeft: '0px', maxWidth: '150px' }}> 
+                <h1 style={{ marginTop: '12px' }}>{title}</h1>
+                <div style={{marginLeft: '-2px', display: 'flex', alignItems: 'center' }}>
+                    <IoMdStar style={{ color: '#FFC319' }} />
+                    <p style={{ marginLeft: '5px', marginBottom: '0' }}> {rating.toFixed(1)}/10 IMDb</p>
+                </div>
             </div>
         </div>
     );

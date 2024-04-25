@@ -34,14 +34,14 @@ export default function MovieList() {
     infinite: false,
     speed: 400,
     slidesToShow: 2.3,
-    slidesToScroll: 1
+    slidesToScroll: 2
   };
 
   return (
     <div>
-      <div className="mt-14 ml-6 mr-7 flex justify-between">
+      <div className="mt-3 ml-6 mr-7 mb-4 flex justify-between">
         <div>
-          <h1 className="text-2xl  justify-self-start">Now Showing</h1>
+          <h2 className="text-2xl  justify-self-start">Now Showing</h2>
         </div>
         <div className="badges flex items-center">
           <div className="badge pt-3 text-gray-400 pb-3 badge-outline">See More</div>
@@ -51,25 +51,27 @@ export default function MovieList() {
       <Slider {...settings}>
         {nowPlaying && nowPlaying.map((movie, index) => (
           <Link key={index} href={`/details/${movie.id}`}> {/* Wrap MoviePosterHome with Link */}
-            <a>
-              <div className="ml-5 mt-5">
+            
+              <div className="ml-6 mt-0">
                 <MoviePosterHome
                   title={movie.title}
                   rating={movie.vote_average}
                   imageUrl={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 />
               </div>
-            </a>
+            
           </Link>
         ))}
       </Slider>
 
-      <div className="mt-10 ml-6 mr-7 mb-7 flex justify-between">
-        <h1 className="text-2xl  justify-self-start">Popular</h1>
+      <div className="mt-4 ml-6 mr-7 mb-4 flex justify-between">
+        <h2 className="text-2xl  justify-self-start">Popular</h2>
         <div className="badges flex items-center">
           <div className="badge pt-3 pb-3 text-gray-400  badge-outline">See More</div>
         </div>
       </div>
+      
     </div>
+    
   );
 }

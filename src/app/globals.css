@@ -6,25 +6,53 @@
 
 @font-face {
   font-family: "Mulish";
-  src: local("Mulish"), url("/src/app/fonts/Mulish-Bold.ttf") format("opentype");
+  src: local("Mulish"), url("fonts/Mulish-Bold.ttf") format("opentype");
   font-weight: bold;
+}
+
+
+
+.icon-btn {
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+.rotated-icon {
+  transform: rotate(90deg); /* Rotate the icon by 45 degrees */
+}
+
+@font-face {
+  font-family: "Mulish Light";
+  src: local("Mulish"), url("fonts/Mulish-Regular.ttf") format("opentype");
+  font-weight: normal;
 }
 
 @font-face {
   font-family: "Merriweather";
-  src: local("Merriweather"), url("/src/app/fonts/Merriweather-Bold.ttf") format("opentype");
-  font-weight: bold;
+  src: local("Merriweather"), url("fonts/Merriweather-Bold.ttf") format("opentype");
+  font-weight: bold; 
 }
 
 
-h2{
+p {
+  font-family: 'Mulish Light', sans-serif;
+}
+
+
+h1 {
   font-family: 'Mulish', sans-serif;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
-h1{
-  font-family: 'Merriweather', sans-serif;
-  font-weight: bold;
+h2 {
+  font-family: 'Merriweather', sans-serif; 
+  font-weight: normal; 
 }
 
 
