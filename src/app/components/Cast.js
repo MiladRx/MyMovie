@@ -16,7 +16,7 @@ const Cast = () => {
       try {
         const response = await fetch('https://api.themoviedb.org/3/movie/693134/credits?language=en-US', options);
         const data = await response.json();
-        // Slice the array to get only the first 4 actors
+        
         setCast(data.cast.slice(0, 4));
       } catch (error) {
         console.error('Error fetching cast:', error);
@@ -24,10 +24,10 @@ const Cast = () => {
     };
 
     fetchCast();
-  }, []); // Empty dependency array ensures the effect runs only once when the component mounts
+  }, []); 
 
   return (
-    <section className="">
+    <section>
       <h2 className="mb-4 pl-5 text-indigo-900 text-2xl">Cast</h2>
       <div className="grid grid-cols-4 gap-1">
         {cast.map((actor) => (

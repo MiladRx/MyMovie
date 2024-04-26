@@ -14,7 +14,7 @@ export default function Home() {
       <Nav />
       <MovieList />
       <MovieSlider />
-     <BottomNav className="" /> {/* Placing BottomNav inside the div */}
+     <BottomNav className="" />
     </section>
   );
 }

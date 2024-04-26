@@ -29,7 +29,7 @@ const getIds = async () => {
 export default function Details({ params }) {
   const [movieDetails, setMovieDetails] = useState(null);
 
-  // Move bookmarkHandler function here
+ 
   const bookmarkHandler = async () => {
     try {
       const ids = await getIds();
@@ -43,12 +43,12 @@ export default function Details({ params }) {
           },
           body: JSON.stringify({
             media_type: "movie",
-            media_id: params.id, // Assuming you want to bookmark the current movie
+            media_id: params.id, 
             favorite: true,
           }),
         }
       );
-      // Handle response as needed
+    
     } catch (error) {
       console.error(error);
     }
@@ -69,7 +69,7 @@ export default function Details({ params }) {
         setMovieDetails(data);
       })
       .catch(err => console.error(err));
-  }, [params.id]); // Re-fetch when params.id changes
+  }, [params.id]);
 
   return (
    <main>
@@ -77,7 +77,7 @@ export default function Details({ params }) {
         <section>
           <section>
             <MoviePoster imageUrl={`https://image.tmdb.org/t/p/w500/${movieDetails.backdrop_path}`} alt={movieDetails.title} />
-            {/* Other details */}
+          
           </section>
 
           <article className="ml-6 mt-7 ">
@@ -98,15 +98,15 @@ export default function Details({ params }) {
               <p className="text-gray-400  " style={{ marginLeft: '3px', marginBottom: '0' }}>{movieDetails.vote_average.toFixed(1)}/10 IMDb</p>
             </div>
 
-            {/* Render badges for genres */}
+            {/* Render genre  */}
             <div className="badges  space-x-2 ml- -ml-0.2  mb-4">
               {movieDetails.genres.slice(0, 3).map(genre => (
                 <div key={genre.id} className="badge bg-blue-100	text-blue-400	p-3 ">{genre.name}</div>
               ))}
             </div>
 
-            {/* Render other movie details as needed */}
-            {/* Render movie details */}
+          
+            {/* Render movie detaljer */}
             <section className="flex flex-wrap">
               <div className="flex-1 mr-4 mb-0">
                 <h3 className="text-gray-600 text-lg">Length</h3>
@@ -125,7 +125,7 @@ export default function Details({ params }) {
             </section>
           </article>
 
-          {/* Render movie description */}
+          {/* Render movie beskrivelse */}
           <MovieDescription description={movieDetails.overview} />
 
           {/* Render cast */}

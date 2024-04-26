@@ -16,7 +16,7 @@ const BottomNav = () => {
                 <BsTicket className="icon rotated-icon" />
 
             </Link>
-            <Link href="/bookmarks">
+            <Link href="/favourites">
 
                 <IoBookmarkOutline className="icon" />
 

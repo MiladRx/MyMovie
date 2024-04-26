@@ -1,7 +1,7 @@
 import React from "react";
 
 const MovieDescription = ({ description }) => {
-  // Truncate description if it exceeds 200 characters
+  
   const truncatedDescription = description.length > 200 ? description.substring(0, 200) + "..." : description;
 
   return (

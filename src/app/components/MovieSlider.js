@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import Link from 'next/link'; // Import Link from next/link
+import Link from 'next/link'; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import MovieDetails from './MovieDetails';
@@ -23,7 +23,7 @@ function MovieSlider() {
             };
 
             try {
-                // Fetch popular movies
+                
                 const popularMoviesResponse = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options);
                 const popularMoviesData = await popularMoviesResponse.json();
                 setPopularMovies(popularMoviesData.results);
@@ -46,7 +46,7 @@ function MovieSlider() {
         slidesToShow: 2,
         slidesToScroll: 1,
         vertical: true,
-        verticalSwiping: true, // Enable vertical swiping to navigate up and down
+        verticalSwiping: true, 
     };
 
     return (
